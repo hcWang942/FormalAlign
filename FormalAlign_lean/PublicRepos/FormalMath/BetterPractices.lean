@@ -353,15 +353,6 @@ theorem lecture02_2010_algebra_32
   (n > a * b - a - b → ∃ x y : ℕ, a * x + b * y = n) ∧
   (n = a * b - a - b → ¬∃ x y : ℕ, a * x + b * y = n):= by sorry
 
-theorem lecture02_2010_algebra_07 :
-  ∃ P : Polynomial ℚ,
-  (∀ x : ℂ, Complex.normSq x ≤ 1 →
-  (P.map (algebraMap ℚ ℂ)).eval x =
-  (P.map (algebraMap ℚ ℂ)).eval ((-x + ↑(Real.sqrt (3 - 3 * x.re^2 - 3 * x.im^2))) / 2)
-  ) ∧
-  P.degree > 0 ∧
-  ∃ (k : ℕ) (a : Fin k.succ → ℚ),
-  P = ∑ j ∈ Finset.range (k + 1), Polynomial.C (a j) * (4 * Polynomial.X ^ 3 - 3 * Polynomial.X) ^ j:=sorry
 
 theorem hscmc_2010_combinatorics_12466
   (p : ℕ)
